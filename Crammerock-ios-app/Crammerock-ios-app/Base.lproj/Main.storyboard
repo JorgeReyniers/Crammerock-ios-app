@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
         <!--Line-up-->
         <scene sceneID="BYI-h8-sxw">
             <objects>
-                <viewController id="8p9-9X-WKj" sceneMemberID="viewController">
+                <viewController id="8p9-9X-WKj" customClass="LineupViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8De-HT-bBQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
         <!--Artist name-->
         <scene sceneID="06u-ap-YDO">
             <objects>
-                <viewController id="aZW-bK-tSc" sceneMemberID="viewController">
+                <viewController id="aZW-bK-tSc" customClass="ArtistViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2WD-G9-LNW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,7 @@
         <!--Admin-->
         <scene sceneID="5fH-uJ-5qj">
             <objects>
-                <viewController id="5yT-C7-kmO" sceneMemberID="viewController">
+                <viewController id="5yT-C7-kmO" customClass="AdminViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l8R-xM-7xz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
