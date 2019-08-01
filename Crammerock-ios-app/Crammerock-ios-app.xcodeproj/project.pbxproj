@@ -10,6 +10,7 @@
 		990446D022F220840002D451 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990446CF22F220840002D451 /* LineupViewController.swift */; };
 		990446D222F220D60002D451 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990446D122F220D60002D451 /* ArtistViewController.swift */; };
 		990446D422F220EF0002D451 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990446D322F220EF0002D451 /* AdminViewController.swift */; };
+		9904471822F31DE40002D451 /* PracticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904471722F31DE40002D451 /* PracticalViewController.swift */; };
 		99391C1922EF4F21000C6A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391C1822EF4F21000C6A1D /* AppDelegate.swift */; };
 		99391C1B22EF4F21000C6A1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391C1A22EF4F21000C6A1D /* HomeViewController.swift */; };
 		99391C1E22EF4F21000C6A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99391C1C22EF4F21000C6A1D /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		990446CF22F220840002D451 /* LineupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		990446D122F220D60002D451 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		990446D322F220EF0002D451 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		9904471722F31DE40002D451 /* PracticalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticalViewController.swift; sourceTree = "<group>"; };
 		99391C1522EF4F21000C6A1D /* Crammerock-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crammerock-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99391C1822EF4F21000C6A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99391C1A22EF4F21000C6A1D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				99391C1822EF4F21000C6A1D /* AppDelegate.swift */,
 				99391C1A22EF4F21000C6A1D /* HomeViewController.swift */,
 				99391C1C22EF4F21000C6A1D /* Main.storyboard */,
+				9904471722F31DE40002D451 /* PracticalViewController.swift */,
 				990446D122F220D60002D451 /* ArtistViewController.swift */,
 				990446D322F220EF0002D451 /* AdminViewController.swift */,
 				99391C1F22EF4F22000C6A1D /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 			files = (
 				99391C1B22EF4F21000C6A1D /* HomeViewController.swift in Sources */,
 				99391C1922EF4F21000C6A1D /* AppDelegate.swift in Sources */,
+				9904471822F31DE40002D451 /* PracticalViewController.swift in Sources */,
 				990446D022F220840002D451 /* LineupViewController.swift in Sources */,
 				990446D422F220EF0002D451 /* AdminViewController.swift in Sources */,
 				990446D222F220D60002D451 /* ArtistViewController.swift in Sources */,

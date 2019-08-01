@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efd-jv-MDQ">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,23 +15,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-et-Lrv">
-                                <rect key="frame" x="83.5" y="20" width="500" height="124"/>
+                                <rect key="frame" x="-62.5" y="40" width="500" height="220"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cr_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-VY-Ud5">
-                                        <rect key="frame" x="0.0" y="0.0" width="500" height="85.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="181.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 &amp; 7 september 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmB-po-Fur">
-                                        <rect key="frame" x="0.0" y="85.5" width="500" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="181.5" width="500" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Stekene, Oost-Vlaanderen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-Nj-zUt">
-                                        <rect key="frame" x="0.0" y="106" width="500" height="18"/>
+                                        <rect key="frame" x="0.0" y="202" width="500" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -51,14 +51,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="-578"/>
+            <point key="canvasLocation" x="-1551" y="229"/>
         </scene>
         <!--Line-up-->
         <scene sceneID="BYI-h8-sxw">
             <objects>
                 <viewController id="8p9-9X-WKj" customClass="LineupViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8De-HT-bBQ">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="35z-JD-FgB"/>
@@ -70,14 +70,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WdR-N3-nfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-682" y="997"/>
         </scene>
         <!--Artist name-->
         <scene sceneID="06u-ap-YDO">
             <objects>
                 <viewController id="aZW-bK-tSc" customClass="ArtistViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2WD-G9-LNW">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="quY-EW-b2p"/>
@@ -86,14 +86,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAt-ec-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2880.8000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-682" y="1774"/>
+        </scene>
+        <!--Practical-->
+        <scene sceneID="hb3-7U-kEc">
+            <objects>
+                <viewController id="8UW-sE-hah" customClass="PracticalViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gDq-CQ-sq1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GI-Ae-TbJ">
+                                <rect key="frame" x="154" y="323" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="85y-Cp-hnu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Practical" image="info" id="IF8-PF-XJY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARx-Be-t81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="229"/>
         </scene>
         <!--Admin-->
         <scene sceneID="5fH-uJ-5qj">
             <objects>
                 <viewController id="5yT-C7-kmO" customClass="AdminViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l8R-xM-7xz">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QL3-9O-eEV">
@@ -111,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Fz-lH-c3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="849"/>
+            <point key="canvasLocation" x="1058" y="229"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bf8-Bq-ATS">
@@ -126,12 +151,13 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KCb-Oz-SM8"/>
                         <segue destination="qYv-Q1-xLw" kind="relationship" relationship="viewControllers" id="zaJ-GW-Y3b"/>
+                        <segue destination="8UW-sE-hah" kind="relationship" relationship="viewControllers" id="ZsQ-r5-gBt"/>
                         <segue destination="5yT-C7-kmO" kind="relationship" relationship="viewControllers" id="UNg-MV-ca6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6s-v2-Tmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="263"/>
+            <point key="canvasLocation" x="-228" y="-579"/>
         </scene>
         <!--Line-up-->
         <scene sceneID="Kfh-DN-0Qj">
@@ -140,7 +166,7 @@
                     <tabBarItem key="tabBarItem" title="Line-up" image="text-list" id="q5c-pB-dsY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7do-jl-fCK">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -150,12 +176,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D44-xO-Riu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1120.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-682" y="229"/>
         </scene>
     </scenes>
     <resources>
         <image name="cr_logo" width="500" height="416.5"/>
         <image name="home" width="30" height="30"/>
+        <image name="info" width="30" height="30"/>
         <image name="text-list" width="30" height="30"/>
         <image name="write" width="30" height="30"/>
     </resources>
