@@ -9,6 +9,8 @@
 import UIKit
 
 class ArtistViewController: UIViewController {
+    
+    var artist: Artist!
 
     override func viewDidLoad() {
         super.viewDidLoad()

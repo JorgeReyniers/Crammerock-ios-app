@@ -57,11 +57,17 @@ class LineUpTableViewController: UITableViewController {
         Artist(name: "Woodie Smalls", stage: .Club, dayOfPerformance: .Zaterdag, startTimeOfPerformance: "20:25"),
         Artist(name: "Yung Mavu", stage: .Club, dayOfPerformance: .Zaterdag, startTimeOfPerformance: "17:05")
         
-    ]
-
+    ].sorted(by: {$0.name < $1.name})
+    
+    var selectedArtists: [Artist] = []
+    
+    
+    @IBOutlet weak var dayOfPerformanceButton: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let selectedValue = dayOfPerformanceButton.titleForSegment(at: dayOfPerformanceButton.selectedSegmentIndex)
+        selectedArtists = artists.filter {$0.dayOfPerformance.rawValue == selectedValue}
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -76,19 +82,25 @@ class LineUpTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return artists.count
+        return selectedArtists.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell", for: indexPath)
-        let artist = artists[indexPath.row]
+        let artist = selectedArtists[indexPath.row]
         // Configure the cell...
         cell.textLabel?.text = artist.name
         cell.detailTextLabel?.text = "\(artist.stage.rawValue) \(artist.startTimeOfPerformance)"
         return cell
     }
-
+    
+    @IBAction func dayOfPerformanceButtonTapped(_ sender: UISegmentedControl) {
+        let selectedValue = dayOfPerformanceButton.titleForSegment(at: dayOfPerformanceButton.selectedSegmentIndex)
+        selectedArtists = artists.filter {$0.dayOfPerformance.rawValue == selectedValue}
+        tableView.reloadData()
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

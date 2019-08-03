@@ -22,7 +22,7 @@ class Artist {
     }
 }
 
-enum DayOfPerformance {
+enum DayOfPerformance: String {
     case Vrijdag, Zaterdag
 }
 
