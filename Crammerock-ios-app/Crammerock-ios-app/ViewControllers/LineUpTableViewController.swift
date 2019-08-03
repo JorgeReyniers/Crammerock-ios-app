@@ -90,11 +90,10 @@ class LineUpTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.artistCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.artistCell, for: indexPath) as! ArtistTableViewCell
         let artist = selectedArtists[indexPath.row]
         // Configure the cell...
-        cell.textLabel?.text = artist.name
-        cell.detailTextLabel?.text = "\(artist.stage.rawValue) \(artist.startTimeOfPerformance)"
+        cell.update(with: artist)
         return cell
     }
     
