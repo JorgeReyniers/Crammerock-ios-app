@@ -95,30 +95,60 @@
             </objects>
             <point key="canvasLocation" x="180" y="229"/>
         </scene>
-        <!--Beheerder-->
-        <scene sceneID="5fH-uJ-5qj">
+        <!--Beheer artiesten-->
+        <scene sceneID="l7m-i6-eDs">
             <objects>
-                <viewController id="5yT-C7-kmO" customClass="AdminViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="l8R-xM-7xz">
+                <tableViewController id="kFh-94-DhN" customClass="AdminTableViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xgi-dR-Qa7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QL3-9O-eEV">
-                                <rect key="frame" x="166" y="323" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="lfO-3G-HOs"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Beheerder" image="write" id="rB7-ag-k96"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Fz-lH-c3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ManageArtistCell" textLabel="B08-Gq-x8v" style="IBUITableViewCellStyleDefault" id="H34-mr-kM8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H34-mr-kM8" id="HjB-lE-OgQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B08-Gq-x8v">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kFh-94-DhN" id="gOT-Cw-4J8"/>
+                            <outlet property="delegate" destination="kFh-94-DhN" id="FZl-dh-NzR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Beheer artiesten" largeTitleDisplayMode="always" id="eqc-3l-m19"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4PE-fV-6xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="229"/>
+            <point key="canvasLocation" x="1204" y="1037"/>
+        </scene>
+        <!--Artiestenbeheer-->
+        <scene sceneID="VBf-Ly-pgU">
+            <objects>
+                <navigationController id="1DP-hv-eIZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Artiestenbeheer" image="write" id="OV7-R6-bRd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ZTi-Mr-JxX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kFh-94-DhN" kind="relationship" relationship="rootViewController" id="e5z-2O-5fJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aya-Oa-xqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="229"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bf8-Bq-ATS">
@@ -134,7 +164,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KCb-Oz-SM8"/>
                         <segue destination="qYv-Q1-xLw" kind="relationship" relationship="viewControllers" id="zaJ-GW-Y3b"/>
                         <segue destination="8UW-sE-hah" kind="relationship" relationship="viewControllers" id="ZsQ-r5-gBt"/>
-                        <segue destination="5yT-C7-kmO" kind="relationship" relationship="viewControllers" id="UNg-MV-ca6"/>
+                        <segue destination="1DP-hv-eIZ" kind="relationship" relationship="viewControllers" id="yhZ-pm-THy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6s-v2-Tmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,7 +243,7 @@
                             <outlet property="delegate" destination="xbX-6P-iel" id="DNw-D3-kxP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Line-up" id="GYL-gQ-oIx"/>
+                    <navigationItem key="navigationItem" title="Line-up" largeTitleDisplayMode="always" id="GYL-gQ-oIx"/>
                     <connections>
                         <outlet property="dayOfPerformanceButton" destination="5k5-HI-OMq" id="SQ0-Fa-iZR"/>
                     </connections>
