@@ -61,7 +61,10 @@ class LineUpTableViewController: UITableViewController {
     
     var selectedArtists: [Artist] = []
     
-    
+    struct PropertyKeys {
+        static let artistCell = "ArtistCell"
+        static let artistDetailsSegue = "ArtistDetailsSegue"
+    }
     @IBOutlet weak var dayOfPerformanceButton: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -87,7 +90,7 @@ class LineUpTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.artistCell, for: indexPath)
         let artist = selectedArtists[indexPath.row]
         // Configure the cell...
         cell.textLabel?.text = artist.name
@@ -95,10 +98,21 @@ class LineUpTableViewController: UITableViewController {
         return cell
     }
     
+    // Actions
+    
     @IBAction func dayOfPerformanceButtonTapped(_ sender: UISegmentedControl) {
         let selectedValue = dayOfPerformanceButton.titleForSegment(at: dayOfPerformanceButton.selectedSegmentIndex)
         selectedArtists = artists.filter {$0.dayOfPerformance.rawValue == selectedValue}
         tableView.reloadData()
+    }
+    
+    // Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let artistDetailsViewController = segue.destination as! ArtistDetailsViewController
+        if let indexPath = tableView.indexPathForSelectedRow, segue.identifier == PropertyKeys.artistDetailsSegue {
+            artistDetailsViewController.artist = selectedArtists[indexPath.row]
+        }
     }
     
     /*

@@ -57,14 +57,14 @@
         <!--Artist name-->
         <scene sceneID="06u-ap-YDO">
             <objects>
-                <viewController id="aZW-bK-tSc" customClass="ArtistViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aZW-bK-tSc" customClass="ArtistDetailsViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2WD-G9-LNW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="quY-EW-b2p"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Artist name" largeTitleDisplayMode="always" id="1Vy-va-CPL"/>
+                    <navigationItem key="navigationItem" title="Artist name" largeTitleDisplayMode="never" id="1Vy-va-CPL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAt-ec-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,6 +203,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="aZW-bK-tSc" kind="show" identifier="ArtistDetailsSegue" id="juB-wj-jgO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

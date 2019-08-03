@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		990446D222F220D60002D451 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990446D122F220D60002D451 /* ArtistViewController.swift */; };
+		990446D222F220D60002D451 /* ArtistDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990446D122F220D60002D451 /* ArtistDetailsViewController.swift */; };
 		990446D422F220EF0002D451 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990446D322F220EF0002D451 /* AdminViewController.swift */; };
 		9904471822F31DE40002D451 /* PracticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9904471722F31DE40002D451 /* PracticalViewController.swift */; };
 		990E924F22F5BD5A004BAE5A /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E924E22F5BD5A004BAE5A /* Artist.swift */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		990446D122F220D60002D451 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		990446D122F220D60002D451 /* ArtistDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailsViewController.swift; sourceTree = "<group>"; };
 		990446D322F220EF0002D451 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		9904471722F31DE40002D451 /* PracticalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticalViewController.swift; sourceTree = "<group>"; };
 		990E924E22F5BD5A004BAE5A /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			children = (
 				990E925022F5C15B004BAE5A /* LineUpTableViewController.swift */,
 				9904471722F31DE40002D451 /* PracticalViewController.swift */,
-				990446D122F220D60002D451 /* ArtistViewController.swift */,
+				990446D122F220D60002D451 /* ArtistDetailsViewController.swift */,
 				990446D322F220EF0002D451 /* AdminViewController.swift */,
 				99391C1A22EF4F21000C6A1D /* HomeViewController.swift */,
 			);
@@ -292,7 +292,7 @@
 				99391C1922EF4F21000C6A1D /* AppDelegate.swift in Sources */,
 				9904471822F31DE40002D451 /* PracticalViewController.swift in Sources */,
 				990446D422F220EF0002D451 /* AdminViewController.swift in Sources */,
-				990446D222F220D60002D451 /* ArtistViewController.swift in Sources */,
+				990446D222F220D60002D451 /* ArtistDetailsViewController.swift in Sources */,
 				990E924F22F5BD5A004BAE5A /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
