@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Nieuws-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,30 +48,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="Vbq-hP-6Sx"/>
+                    <tabBarItem key="tabBarItem" title="Nieuws" image="home" id="Vbq-hP-6Sx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1551" y="229"/>
-        </scene>
-        <!--Line-up-->
-        <scene sceneID="BYI-h8-sxw">
-            <objects>
-                <viewController id="8p9-9X-WKj" customClass="LineupViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8De-HT-bBQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="35z-JD-FgB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Line-up" largeTitleDisplayMode="always" id="5SF-HV-IcO"/>
-                    <connections>
-                        <segue destination="aZW-bK-tSc" kind="show" id="8ig-pL-v4A"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WdR-N3-nfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-682" y="997"/>
         </scene>
         <!--Artist name-->
         <scene sceneID="06u-ap-YDO">
@@ -89,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="-682" y="1774"/>
         </scene>
-        <!--Practical-->
+        <!--Praktisch-->
         <scene sceneID="hb3-7U-kEc">
             <objects>
                 <viewController id="8UW-sE-hah" customClass="PracticalViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,13 +89,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="85y-Cp-hnu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Practical" image="info" id="IF8-PF-XJY"/>
+                    <tabBarItem key="tabBarItem" title="Praktisch" image="info" id="IF8-PF-XJY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARx-Be-t81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="229"/>
         </scene>
-        <!--Admin-->
+        <!--Beheerder-->
         <scene sceneID="5fH-uJ-5qj">
             <objects>
                 <viewController id="5yT-C7-kmO" customClass="AdminViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,7 +114,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lfO-3G-HOs"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Admin" image="write" id="rB7-ag-k96"/>
+                    <tabBarItem key="tabBarItem" title="Beheerder" image="write" id="rB7-ag-k96"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Fz-lH-c3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,12 +153,57 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8p9-9X-WKj" kind="relationship" relationship="rootViewController" id="5Vd-BH-uMO"/>
+                        <segue destination="xbX-6P-iel" kind="relationship" relationship="rootViewController" id="L3c-Uo-cat"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D44-xO-Riu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-682" y="229"/>
+        </scene>
+        <!--Line-up-->
+        <scene sceneID="cY5-yn-VV1">
+            <objects>
+                <tableViewController id="xbX-6P-iel" customClass="LineUpTableViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WKN-Ha-Ldb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistCell" textLabel="zpe-jZ-m65" detailTextLabel="T3P-fR-fNJ" style="IBUITableViewCellStyleSubtitle" id="8yy-5H-xG8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8yy-5H-xG8" id="ZXa-WI-eaQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zpe-jZ-m65">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T3P-fR-fNJ">
+                                            <rect key="frame" x="16" y="25.5" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xbX-6P-iel" id="hgk-fF-Nt8"/>
+                            <outlet property="delegate" destination="xbX-6P-iel" id="DNw-D3-kxP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Line-up" id="GYL-gQ-oIx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v16-rj-lp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682" y="1037"/>
         </scene>
     </scenes>
     <resources>
