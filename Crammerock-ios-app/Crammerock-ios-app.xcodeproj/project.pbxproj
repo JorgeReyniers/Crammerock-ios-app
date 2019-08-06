@@ -13,6 +13,7 @@
 		990E925122F5C15B004BAE5A /* LineUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E925022F5C15B004BAE5A /* LineUpTableViewController.swift */; };
 		990E925522F5F8BF004BAE5A /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E925422F5F8BF004BAE5A /* AdminTableViewController.swift */; };
 		990E925722F60A3E004BAE5A /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E925622F60A3E004BAE5A /* ArtistTableViewCell.swift */; };
+		990E925922F86AC3004BAE5A /* AddEditArtistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E925822F86AC3004BAE5A /* AddEditArtistTableViewController.swift */; };
 		99391C1922EF4F21000C6A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391C1822EF4F21000C6A1D /* AppDelegate.swift */; };
 		99391C1B22EF4F21000C6A1D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391C1A22EF4F21000C6A1D /* HomeViewController.swift */; };
 		99391C1E22EF4F21000C6A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99391C1C22EF4F21000C6A1D /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		990E925022F5C15B004BAE5A /* LineUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineUpTableViewController.swift; sourceTree = "<group>"; };
 		990E925422F5F8BF004BAE5A /* AdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTableViewController.swift; sourceTree = "<group>"; };
 		990E925622F60A3E004BAE5A /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
+		990E925822F86AC3004BAE5A /* AddEditArtistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditArtistTableViewController.swift; sourceTree = "<group>"; };
 		99391C1522EF4F21000C6A1D /* Crammerock-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crammerock-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99391C1822EF4F21000C6A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99391C1A22EF4F21000C6A1D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		990E920622F4866A004BAE5A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				990E925822F86AC3004BAE5A /* AddEditArtistTableViewController.swift */,
 				990E925022F5C15B004BAE5A /* LineUpTableViewController.swift */,
 				9904471722F31DE40002D451 /* PracticalViewController.swift */,
 				990446D122F220D60002D451 /* ArtistDetailsViewController.swift */,
@@ -292,6 +295,7 @@
 			files = (
 				990E925122F5C15B004BAE5A /* LineUpTableViewController.swift in Sources */,
 				99391C1B22EF4F21000C6A1D /* HomeViewController.swift in Sources */,
+				990E925922F86AC3004BAE5A /* AddEditArtistTableViewController.swift in Sources */,
 				99391C1922EF4F21000C6A1D /* AppDelegate.swift in Sources */,
 				9904471822F31DE40002D451 /* PracticalViewController.swift in Sources */,
 				990446D222F220D60002D451 /* ArtistDetailsViewController.swift in Sources */,
