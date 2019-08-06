@@ -16,9 +16,24 @@ class AddEditArtistTableViewController: UITableViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var stageTextField: UITextField!
     @IBOutlet weak var dayOfPerformanceTextField: UITextField!
-    @IBOutlet weak var startTimeOfPerformanceTextField: UITextField!
-    @IBOutlet weak var endTimeOfPerformanceTextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var startDateTimeLabel: UILabel!
+    @IBOutlet weak var startDateTimePicker: UIDatePicker!
+    @IBOutlet weak var endDateTimeLabel: UILabel!
+    @IBOutlet weak var endDateTimePicker: UIDatePicker!
+    
+    let startDateTimePickerCellIndexPath = IndexPath(row: 1, section: 2)
+    let endDateTimePickerCellIndexPath = IndexPath(row: 3, section: 2)
+    var isStartDateTimePickerShown: Bool = false {
+        didSet {
+            startDateTimePicker.isHidden = !isStartDateTimePickerShown
+        }
+    }
+    var isEndDateTimePickerShown: Bool = false {
+        didSet {
+            endDateTimePicker.isHidden = !isEndDateTimePickerShown
+        }
+    }
     
     struct PropertyKeys {
         static let saveUnwindSegue = "SaveUnwindSegue"
@@ -34,13 +49,30 @@ class AddEditArtistTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    //Action methods
+    
+    @IBAction func textEditingChanged(_ sender: Any) {
+        updateSaveButtonState()
+    }
+    
+    @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+        updateDateLabels()
+    }
+    
+    
+    //Update methods
+    
     func updateUI(){
         if let artist = artist {
             nameTextField.text = artist.name
             stageTextField.text = artist.stage.rawValue
             dayOfPerformanceTextField.text = artist.dayOfPerformance.rawValue
-            startTimeOfPerformanceTextField.text = artist.startTimeOfPerformance
-            endTimeOfPerformanceTextField.text = artist.endTimeOfPerformance
+            
+            //Hier komt de initialisatie van de datepickers en labels naar de datum van de artiest
+            startDateTimePicker.date = artist.startTimeOfPerformance
+            endDateTimePicker.date = artist.endTimeOfPerformance
+            updateDateLabels()
+            
             navigationItem.title = "Wijzig artiest"
         } else {
             navigationItem.title = "Nieuwe artiest"
@@ -52,14 +84,17 @@ class AddEditArtistTableViewController: UITableViewController {
         let nameText = nameTextField.text ?? ""
         let stageText = stageTextField.text ?? ""
         let dayOfPerformanceText = dayOfPerformanceTextField.text ?? ""
-        let startTimeOfPerformanceText = startTimeOfPerformanceTextField.text ?? ""
-        let endTimeOfPerformanceText = endTimeOfPerformanceTextField.text ?? ""
-        saveButton.isEnabled = !nameText.isEmpty && !stageText.isEmpty && !dayOfPerformanceText.isEmpty && !startTimeOfPerformanceText.isEmpty && !endTimeOfPerformanceText.isEmpty
+        saveButton.isEnabled = !nameText.isEmpty && !stageText.isEmpty && !dayOfPerformanceText.isEmpty
     }
     
-    @IBAction func textEditingChanged(_ sender: Any) {
-        updateSaveButtonState()
+    
+    
+    func updateDateLabels() {
+        startDateTimeLabel.text = DateHelper.dateToString(date: startDateTimePicker.date)
+        endDateTimeLabel.text = DateHelper.dateToString(date: endDateTimePicker.date)
     }
+    
+    //Segue methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == PropertyKeys.saveUnwindSegue else { return }
@@ -68,54 +103,66 @@ class AddEditArtistTableViewController: UITableViewController {
         let stageEnum = Stage(rawValue: stageText) ?? .Club
         let dayOfPerformanceText = dayOfPerformanceTextField.text ?? ""
         let dayOfPerformanceEnum = DayOfPerformance(rawValue: dayOfPerformanceText) ?? .Vrijdag
-        let startTimeOfPerformanceText = startTimeOfPerformanceTextField.text ?? ""
-        let endTimeOfPerformanceText = endTimeOfPerformanceTextField.text ?? ""
-        artist = Artist(name: nameText, stage: stageEnum, dayOfPerformance: dayOfPerformanceEnum, startTimeOfPerformance: startTimeOfPerformanceText, endTimeOfPerformance: endTimeOfPerformanceText)
+        
+        //Hier worden de gegevens uit de datepickers of labels gehaald
+        let startTimeOfPerformance = startDateTimePicker.date
+        let endTimeOfPerformance = endDateTimePicker.date
+        artist = Artist(name: nameText, stage: stageEnum, dayOfPerformance: dayOfPerformanceEnum, startTimeOfPerformance: startTimeOfPerformance, endTimeOfPerformance: endTimeOfPerformance)
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    //table view delegate methods
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+        case (startDateTimePickerCellIndexPath.section, startDateTimePickerCellIndexPath.row):
+            if isStartDateTimePickerShown {
+                return 216.0
+            } else {
+                return 0.0
+            }
+        case (endDateTimePickerCellIndexPath.section, endDateTimePickerCellIndexPath.row):
+            if isEndDateTimePickerShown {
+                return 216.0
+            } else {
+                return 0.0
+            }
+        default:
+            return 44.0
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch (indexPath.section, indexPath.row) {
+        case (startDateTimePickerCellIndexPath.section, startDateTimePickerCellIndexPath.row - 1):
+            if isStartDateTimePickerShown {
+                isStartDateTimePickerShown = false
+            } else if isEndDateTimePickerShown {
+                isEndDateTimePickerShown = false
+                isStartDateTimePickerShown = true
+            } else {
+                isStartDateTimePickerShown = true
+            }
+            
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        
+        case (endDateTimePickerCellIndexPath.section, endDateTimePickerCellIndexPath.row - 1):
+            if isEndDateTimePickerShown {
+                isEndDateTimePickerShown = false
+            } else if isStartDateTimePickerShown {
+                isStartDateTimePickerShown = false
+                isEndDateTimePickerShown = true
+            } else {
+                isEndDateTimePickerShown = true
+            }
+            
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        default:
+            break
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
