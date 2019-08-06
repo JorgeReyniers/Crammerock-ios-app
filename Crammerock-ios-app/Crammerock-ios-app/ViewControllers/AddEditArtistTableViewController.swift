@@ -22,8 +22,8 @@ class AddEditArtistTableViewController: UITableViewController {
     @IBOutlet weak var endDateTimePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    let startDateTimePickerCellIndexPath = IndexPath(row: 1, section: 2)
-    let endDateTimePickerCellIndexPath = IndexPath(row: 3, section: 2)
+    let startDateTimePickerCellIndexPath = IndexPath(row: 1, section: 3)
+    let endDateTimePickerCellIndexPath = IndexPath(row: 3, section: 3)
     var isStartDateTimePickerShown: Bool = false {
         didSet {
             startDateTimePicker.isHidden = !isStartDateTimePickerShown
