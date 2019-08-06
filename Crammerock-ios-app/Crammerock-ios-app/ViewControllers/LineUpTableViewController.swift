@@ -41,8 +41,7 @@ class LineUpTableViewController: UITableViewController {
     }
     
     func defineSelectedArtists() -> [Artist] {
-        let selectedValue = dayOfPerformanceButton.titleForSegment(at: dayOfPerformanceButton.selectedSegmentIndex)
-        return artists.filter {$0.dayOfPerformance.rawValue == selectedValue}
+        return artists.filter {$0.dayOfPerformance.rawValue == dayOfPerformanceButton.selectedSegmentIndex}
     }
 
     // MARK: - Table view data source

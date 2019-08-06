@@ -93,10 +93,28 @@ class Artist : Codable{
     }
 }
 
-enum DayOfPerformance: String, Codable {
+enum DayOfPerformance: Int, Codable {
     case Vrijdag, Zaterdag
+    var stringValue: String {
+        switch self {
+        case .Vrijdag:
+            return "Vrijdag"
+        case .Zaterdag:
+            return "Zaterdag"
+        }
+    }
 }
 
-enum Stage: String, Codable {
-    case MainNorth = "Main North", MainSouth = "Main South", Club
+enum Stage: Int, Codable {
+    case MainNorth, MainSouth, Club
+    var stringValue: String {
+        switch self {
+        case .MainNorth:
+            return "Main North"
+        case .MainSouth:
+            return "Main South"
+        case .Club:
+            return "Club"
+        }
+    }
 }

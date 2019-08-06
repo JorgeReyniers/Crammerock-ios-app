@@ -14,13 +14,13 @@ class AddEditArtistTableViewController: UITableViewController {
     
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var stageTextField: UITextField!
-    @IBOutlet weak var dayOfPerformanceTextField: UITextField!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var stageSelectButton: UISegmentedControl!
+    @IBOutlet weak var dayOfPerformanceSelectButton: UISegmentedControl!
     @IBOutlet weak var startDateTimeLabel: UILabel!
     @IBOutlet weak var startDateTimePicker: UIDatePicker!
     @IBOutlet weak var endDateTimeLabel: UILabel!
     @IBOutlet weak var endDateTimePicker: UIDatePicker!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     let startDateTimePickerCellIndexPath = IndexPath(row: 1, section: 2)
     let endDateTimePickerCellIndexPath = IndexPath(row: 3, section: 2)
@@ -65,10 +65,8 @@ class AddEditArtistTableViewController: UITableViewController {
     func updateUI(){
         if let artist = artist {
             nameTextField.text = artist.name
-            stageTextField.text = artist.stage.rawValue
-            dayOfPerformanceTextField.text = artist.dayOfPerformance.rawValue
-            
-            //Hier komt de initialisatie van de datepickers en labels naar de datum van de artiest
+            stageSelectButton.selectedSegmentIndex = artist.stage.rawValue
+            dayOfPerformanceSelectButton.selectedSegmentIndex = artist.dayOfPerformance.rawValue
             startDateTimePicker.date = artist.startDateTimeOfPerformance
             endDateTimePicker.date = artist.endDateTimeOfPerformance
             updateDateLabels()
@@ -82,12 +80,8 @@ class AddEditArtistTableViewController: UITableViewController {
     
     func updateSaveButtonState() {
         let nameText = nameTextField.text ?? ""
-        let stageText = stageTextField.text ?? ""
-        let dayOfPerformanceText = dayOfPerformanceTextField.text ?? ""
-        saveButton.isEnabled = !nameText.isEmpty && !stageText.isEmpty && !dayOfPerformanceText.isEmpty
+        saveButton.isEnabled = !nameText.isEmpty
     }
-    
-    
     
     func updateDateLabels() {
         startDateTimeLabel.text = DateHelper.dateToString(date: startDateTimePicker.date)
@@ -99,12 +93,8 @@ class AddEditArtistTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == PropertyKeys.saveUnwindSegue else { return }
         let nameText = nameTextField.text?.capitalized ?? ""
-        let stageText = stageTextField.text ?? ""
-        let stageEnum = Stage(rawValue: stageText) ?? .Club
-        let dayOfPerformanceText = dayOfPerformanceTextField.text ?? ""
-        let dayOfPerformanceEnum = DayOfPerformance(rawValue: dayOfPerformanceText) ?? .Vrijdag
-        
-        //Hier worden de gegevens uit de datepickers of labels gehaald
+        let stageEnum = Stage(rawValue: stageSelectButton.selectedSegmentIndex) ?? .MainNorth
+        let dayOfPerformanceEnum = DayOfPerformance(rawValue: dayOfPerformanceSelectButton.selectedSegmentIndex) ?? .Vrijdag
         let startDateTimeOfPerformance = startDateTimePicker.date
         let endDateTimeOfPerformance = endDateTimePicker.date
         artist = Artist(name: nameText, stage: stageEnum, dayOfPerformance: dayOfPerformanceEnum, startDateTimeOfPerformance: startDateTimeOfPerformance, endDateTimeOfPerformance: endDateTimeOfPerformance)
