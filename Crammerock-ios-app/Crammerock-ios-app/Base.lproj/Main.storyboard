@@ -253,8 +253,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="vr 6 september 12:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AxH-Pp-GAU">
-                                                    <rect key="frame" x="195" y="12" width="164" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="12:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AxH-Pp-GAU">
+                                                    <rect key="frame" x="316" y="12" width="43" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -270,12 +270,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svi-2Y-Qej">
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svi-2Y-Qej">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
-                                                    <date key="date" timeIntervalSinceReferenceDate="586795328.10576499">
-                                                        <!--2019-08-06 14:42:08 +0000-->
-                                                    </date>
-                                                    <date key="minimumDate" timeIntervalSinceReferenceDate="589456800">
+                                                    <date key="date" timeIntervalSinceReferenceDate="589456800.10576499">
                                                         <!--2019-09-06 10:00:00 +0000-->
                                                     </date>
                                                     <locale key="locale" localeIdentifier="nl_BE"/>
@@ -306,8 +303,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="vr 6 september 12:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jmj-Jv-nbi">
-                                                    <rect key="frame" x="195" y="12" width="164" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="12:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jmj-Jv-nbi">
+                                                    <rect key="frame" x="316" y="12" width="43" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -323,12 +320,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qRT-Ph-OAy">
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRT-Ph-OAy">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
-                                                    <date key="date" timeIntervalSinceReferenceDate="586795566.66663694">
-                                                        <!--2019-08-06 14:46:06 +0000-->
-                                                    </date>
-                                                    <date key="minimumDate" timeIntervalSinceReferenceDate="589456800">
+                                                    <date key="date" timeIntervalSinceReferenceDate="589456800.66663694">
                                                         <!--2019-09-06 10:00:00 +0000-->
                                                     </date>
                                                     <locale key="locale" localeIdentifier="nl_BE"/>

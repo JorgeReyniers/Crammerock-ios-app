@@ -36,6 +36,9 @@ class AddEditArtistTableViewController: UITableViewController {
     }
     
     struct PropertyKeys {
+        static let startDay = 6
+        static let startMonth = 9
+        static let startYear = 2019
         static let saveUnwindSegue = "SaveUnwindSegue"
     }
     
@@ -84,8 +87,8 @@ class AddEditArtistTableViewController: UITableViewController {
     }
     
     func updateDateLabels() {
-        startDateTimeLabel.text = DateHelper.dateToString(date: startDateTimePicker.date)
-        endDateTimeLabel.text = DateHelper.dateToString(date: endDateTimePicker.date)
+        startDateTimeLabel.text = DateHelper.getTimeString(date: startDateTimePicker.date)
+        endDateTimeLabel.text = DateHelper.getTimeString(date: endDateTimePicker.date)
     }
     
     //Segue methods
@@ -95,9 +98,19 @@ class AddEditArtistTableViewController: UITableViewController {
         let nameText = nameTextField.text?.capitalized ?? ""
         let stageEnum = Stage(rawValue: stageSelectButton.selectedSegmentIndex) ?? .MainNorth
         let dayOfPerformanceEnum = DayOfPerformance(rawValue: dayOfPerformanceSelectButton.selectedSegmentIndex) ?? .Vrijdag
-        let startDateTimeOfPerformance = startDateTimePicker.date
-        let endDateTimeOfPerformance = endDateTimePicker.date
+        let startDateTimeOfPerformance = calculateDate(date: startDateTimePicker.date, dayOfPerformance: dayOfPerformanceEnum)
+        let endDateTimeOfPerformance = calculateDate(date: endDateTimePicker.date, dayOfPerformance: dayOfPerformanceEnum)
         artist = Artist(name: nameText, stage: stageEnum, dayOfPerformance: dayOfPerformanceEnum, startDateTimeOfPerformance: startDateTimeOfPerformance, endDateTimeOfPerformance: endDateTimeOfPerformance)
+    }
+    
+    //Other methods
+    
+    func calculateDate(date: Date, dayOfPerformance: DayOfPerformance) -> Date {
+        let hour = Calendar.current.component(.hour, from: date)
+        let minutes = Calendar.current.component(.minute, from: date)
+        var day = (dayOfPerformance == .Vrijdag) ? PropertyKeys.startDay : PropertyKeys.startDay + 1
+        day = (hour > 7) ? day : day + 1
+        return DateHelper.createDate(day: day, month: PropertyKeys.startMonth, year: PropertyKeys.startYear, hour: hour, minutes: minutes)
     }
     
     //table view delegate methods

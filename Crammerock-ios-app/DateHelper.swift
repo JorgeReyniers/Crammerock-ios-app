@@ -11,7 +11,6 @@ import Foundation
 class DateHelper {
     static func createDate(day: Int, month: Int, year: Int, hour: Int, minutes: Int) -> Date {
         var dateComponents = DateComponents()
-        dateComponents.timeZone = TimeZone(abbreviation: "BST")
         dateComponents.day = day
         dateComponents.month = month
         dateComponents.year = year
