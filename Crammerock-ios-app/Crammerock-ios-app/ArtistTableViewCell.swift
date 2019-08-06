@@ -11,7 +11,7 @@ import UIKit
 class ArtistTableViewCell: UITableViewCell {
 
     @IBOutlet weak var artistNameLabel: UILabel!
-    @IBOutlet weak var startTimeOfPerformanceLabel: UILabel!
+    @IBOutlet weak var startDateTimeOfPerformanceLabel: UILabel!
     @IBOutlet weak var stageLabel: UILabel!
     
     override func awakeFromNib() {
@@ -27,7 +27,7 @@ class ArtistTableViewCell: UITableViewCell {
     
     func update(with artist: Artist) {
         artistNameLabel.text = artist.name
-        startTimeOfPerformanceLabel.text = DateHelper.getTimeString(date: artist.startTimeOfPerformance)
+        startDateTimeOfPerformanceLabel.text = DateHelper.getTimeString(date: artist.startDateTimeOfPerformance)
         stageLabel.text = artist.stage.rawValue
     }
 

@@ -525,7 +525,7 @@
                                 <connections>
                                     <outlet property="artistNameLabel" destination="NNK-Bm-DMb" id="oni-DK-9mY"/>
                                     <outlet property="stageLabel" destination="kq5-tL-ueS" id="0Wc-bs-Igs"/>
-                                    <outlet property="startTimeOfPerformanceLabel" destination="HQ0-Mk-Hk5" id="mwE-Ej-5e9"/>
+                                    <outlet property="startDateTimeOfPerformanceLabel" destination="HQ0-Mk-Hk5" id="QYK-eB-S9D"/>
                                     <segue destination="aZW-bK-tSc" kind="show" identifier="ArtistDetailsSegue" id="juB-wj-jgO"/>
                                 </connections>
                             </tableViewCell>

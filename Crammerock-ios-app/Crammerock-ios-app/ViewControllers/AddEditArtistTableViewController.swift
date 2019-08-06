@@ -69,8 +69,8 @@ class AddEditArtistTableViewController: UITableViewController {
             dayOfPerformanceTextField.text = artist.dayOfPerformance.rawValue
             
             //Hier komt de initialisatie van de datepickers en labels naar de datum van de artiest
-            startDateTimePicker.date = artist.startTimeOfPerformance
-            endDateTimePicker.date = artist.endTimeOfPerformance
+            startDateTimePicker.date = artist.startDateTimeOfPerformance
+            endDateTimePicker.date = artist.endDateTimeOfPerformance
             updateDateLabels()
             
             navigationItem.title = "Wijzig artiest"
@@ -105,9 +105,9 @@ class AddEditArtistTableViewController: UITableViewController {
         let dayOfPerformanceEnum = DayOfPerformance(rawValue: dayOfPerformanceText) ?? .Vrijdag
         
         //Hier worden de gegevens uit de datepickers of labels gehaald
-        let startTimeOfPerformance = startDateTimePicker.date
-        let endTimeOfPerformance = endDateTimePicker.date
-        artist = Artist(name: nameText, stage: stageEnum, dayOfPerformance: dayOfPerformanceEnum, startTimeOfPerformance: startTimeOfPerformance, endTimeOfPerformance: endTimeOfPerformance)
+        let startDateTimeOfPerformance = startDateTimePicker.date
+        let endDateTimeOfPerformance = endDateTimePicker.date
+        artist = Artist(name: nameText, stage: stageEnum, dayOfPerformance: dayOfPerformanceEnum, startDateTimeOfPerformance: startDateTimeOfPerformance, endDateTimeOfPerformance: endDateTimeOfPerformance)
     }
     
     //table view delegate methods
