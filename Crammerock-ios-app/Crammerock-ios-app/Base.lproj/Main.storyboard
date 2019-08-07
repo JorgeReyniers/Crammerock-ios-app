@@ -49,6 +49,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nieuws" image="home" id="Vbq-hP-6Sx"/>
+                    <connections>
+                        <outlet property="logoHeaderImage" destination="beJ-VY-Ud5" id="bmG-Tn-EIq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
