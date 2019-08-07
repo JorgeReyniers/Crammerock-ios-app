@@ -73,7 +73,6 @@ class AddEditArtistTableViewController: UITableViewController {
             startDateTimePicker.date = artist.startDateTimeOfPerformance
             endDateTimePicker.date = artist.endDateTimeOfPerformance
             updateDateLabels()
-            
             navigationItem.title = "Wijzig artiest"
         } else {
             navigationItem.title = "Nieuwe artiest"
@@ -87,8 +86,8 @@ class AddEditArtistTableViewController: UITableViewController {
     }
     
     func updateDateLabels() {
-        startDateTimeLabel.text = DateHelper.getTimeString(date: startDateTimePicker.date)
-        endDateTimeLabel.text = DateHelper.getTimeString(date: endDateTimePicker.date)
+        startDateTimeLabel.text = startDateTimePicker.date.toTimeString()
+        endDateTimeLabel.text = endDateTimePicker.date.toTimeString()
     }
     
     //Segue methods

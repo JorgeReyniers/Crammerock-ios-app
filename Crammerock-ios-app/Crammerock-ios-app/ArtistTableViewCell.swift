@@ -27,7 +27,7 @@ class ArtistTableViewCell: UITableViewCell {
     
     func update(with artist: Artist) {
         artistNameLabel.text = artist.name
-        startDateTimeOfPerformanceLabel.text = DateHelper.getTimeString(date: artist.startDateTimeOfPerformance)
+        startDateTimeOfPerformanceLabel.text = artist.startDateTimeOfPerformance.toTimeString()
         stageLabel.text = artist.stage.stringValue
     }
 

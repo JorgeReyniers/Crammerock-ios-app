@@ -20,22 +20,28 @@ class DateHelper {
         guard let someDate = calendar.date(from: dateComponents) else { return Date() }
         return someDate
     }
-    
-    static func stringToDate(dateString: String) -> Date {
+}
+
+extension String {
+    //Voorlopig nog nergens gebruikt!
+    func toDate() -> Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
-        return formatter.date(from: dateString) ?? Date()
+        return formatter.date(from: self) ?? Date()
     }
-    
-    static func dateToString(date: Date) -> String {
+}
+
+extension Date {
+    //Voorlopig nog nergens gebruikt!
+    func toString() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
-        return formatter.string(from: date)
+        return formatter.string(from: self)
     }
     
-    static func getTimeString(date:Date) -> String {
+    func toTimeString() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
-        return formatter.string(from:date)
+        return formatter.string(from:self)
     }
 }
