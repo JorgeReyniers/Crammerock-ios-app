@@ -21,6 +21,10 @@
 		99391C2322EF4F22000C6A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99391C2122EF4F22000C6A1D /* LaunchScreen.storyboard */; };
 		99391C2E22EF4F22000C6A1D /* Crammerock_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391C2D22EF4F22000C6A1D /* Crammerock_ios_appTests.swift */; };
 		99391C3922EF4F22000C6A1D /* Crammerock_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391C3822EF4F22000C6A1D /* Crammerock_ios_appUITests.swift */; };
+		996B6BE222FB32AD0012A3E3 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BE122FB32AD0012A3E3 /* NetworkRequest.swift */; };
+		996B6BE522FB4C2D0012A3E3 /* DayOfPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BE422FB4C2D0012A3E3 /* DayOfPerformance.swift */; };
+		996B6BE722FB4C350012A3E3 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BE622FB4C350012A3E3 /* Stage.swift */; };
+		996B6BE922FB4C3E0012A3E3 /* ArtistDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BE822FB4C3E0012A3E3 /* ArtistDetails.swift */; };
 		9998BBE122F9A5050011C987 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9998BBE022F9A5050011C987 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		99391C3422EF4F22000C6A1D /* Crammerock-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crammerock-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99391C3822EF4F22000C6A1D /* Crammerock_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crammerock_ios_appUITests.swift; sourceTree = "<group>"; };
 		99391C3A22EF4F22000C6A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996B6BE122FB32AD0012A3E3 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		996B6BE422FB4C2D0012A3E3 /* DayOfPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfPerformance.swift; sourceTree = "<group>"; };
+		996B6BE622FB4C350012A3E3 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		996B6BE822FB4C3E0012A3E3 /* ArtistDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetails.swift; sourceTree = "<group>"; };
 		9998BBE022F9A5050011C987 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +114,7 @@
 		990E924D22F5BD2B004BAE5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				990E924E22F5BD5A004BAE5A /* Artist.swift */,
+				996B6BE322FB4BFC0012A3E3 /* Artist */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				9998BBE022F9A5050011C987 /* DateHelper.swift */,
+				996B6BE122FB32AD0012A3E3 /* NetworkRequest.swift */,
 				99391C1722EF4F21000C6A1D /* Crammerock-ios-app */,
 				99391C2C22EF4F22000C6A1D /* Crammerock-ios-appTests */,
 				99391C3722EF4F22000C6A1D /* Crammerock-ios-appUITests */,
@@ -163,6 +172,17 @@
 				99391C3A22EF4F22000C6A1D /* Info.plist */,
 			);
 			path = "Crammerock-ios-appUITests";
+			sourceTree = "<group>";
+		};
+		996B6BE322FB4BFC0012A3E3 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				990E924E22F5BD5A004BAE5A /* Artist.swift */,
+				996B6BE622FB4C350012A3E3 /* Stage.swift */,
+				996B6BE422FB4C2D0012A3E3 /* DayOfPerformance.swift */,
+				996B6BE822FB4C3E0012A3E3 /* ArtistDetails.swift */,
+			);
+			path = Artist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,14 +318,18 @@
 			files = (
 				990E925122F5C15B004BAE5A /* LineUpTableViewController.swift in Sources */,
 				99391C1B22EF4F21000C6A1D /* HomeViewController.swift in Sources */,
+				996B6BE522FB4C2D0012A3E3 /* DayOfPerformance.swift in Sources */,
 				990E925922F86AC3004BAE5A /* AddEditArtistTableViewController.swift in Sources */,
 				99391C1922EF4F21000C6A1D /* AppDelegate.swift in Sources */,
+				996B6BE922FB4C3E0012A3E3 /* ArtistDetails.swift in Sources */,
 				9904471822F31DE40002D451 /* PracticalViewController.swift in Sources */,
 				9998BBE122F9A5050011C987 /* DateHelper.swift in Sources */,
 				990446D222F220D60002D451 /* ArtistDetailsViewController.swift in Sources */,
 				990E925522F5F8BF004BAE5A /* AdminTableViewController.swift in Sources */,
+				996B6BE222FB32AD0012A3E3 /* NetworkRequest.swift in Sources */,
 				990E925722F60A3E004BAE5A /* ArtistTableViewCell.swift in Sources */,
 				990E924F22F5BD5A004BAE5A /* Artist.swift in Sources */,
+				996B6BE722FB4C350012A3E3 /* Stage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

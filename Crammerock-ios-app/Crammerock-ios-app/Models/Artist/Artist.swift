@@ -14,6 +14,7 @@ class Artist : Codable{
     var dayOfPerformance: DayOfPerformance
     var startDateTimeOfPerformance: Date
     var endDateTimeOfPerformance: Date
+    var artistDetails: ArtistDetails?
     
     static var archiveUrl: URL {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -90,31 +91,5 @@ class Artist : Codable{
             Artist(name: "Woodie Smalls", stage: .Club, dayOfPerformance: .Zaterdag, startDateTimeOfPerformance: DateHelper.createDate(day: 7, month: 9, year: 2019, hour: 20, minutes: 25), endDateTimeOfPerformance: DateHelper.createDate(day: 7, month: 9, year: 2019, hour: 21, minutes: 10)),
             Artist(name: "Yung Mavu", stage: .Club, dayOfPerformance: .Zaterdag, startDateTimeOfPerformance: DateHelper.createDate(day: 7, month: 9, year: 2019, hour: 17, minutes: 05), endDateTimeOfPerformance: DateHelper.createDate(day: 7, month: 9, year: 2019, hour: 17, minutes: 50))
         ]
-    }
-}
-
-enum DayOfPerformance: Int, Codable {
-    case Vrijdag, Zaterdag
-    var stringValue: String {
-        switch self {
-        case .Vrijdag:
-            return "Vrijdag"
-        case .Zaterdag:
-            return "Zaterdag"
-        }
-    }
-}
-
-enum Stage: Int, Codable {
-    case MainNorth, MainSouth, Club
-    var stringValue: String {
-        switch self {
-        case .MainNorth:
-            return "Main North"
-        case .MainSouth:
-            return "Main South"
-        case .Club:
-            return "Club"
-        }
     }
 }
