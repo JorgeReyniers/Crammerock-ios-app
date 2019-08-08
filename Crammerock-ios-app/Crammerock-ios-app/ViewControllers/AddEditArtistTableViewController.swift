@@ -12,7 +12,6 @@ class AddEditArtistTableViewController: UITableViewController {
 
     var artist:Artist?
     
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var stageSelectButton: UISegmentedControl!
     @IBOutlet weak var dayOfPerformanceSelectButton: UISegmentedControl!

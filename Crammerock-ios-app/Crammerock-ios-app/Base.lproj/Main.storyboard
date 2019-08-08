@@ -64,10 +64,27 @@
                     <view key="view" contentMode="scaleToFill" id="2WD-G9-LNW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lz-dp-hDV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="quY-EW-b2p" firstAttribute="trailing" secondItem="8lz-dp-hDV" secondAttribute="trailing" id="3Xa-af-dlz"/>
+                            <constraint firstItem="quY-EW-b2p" firstAttribute="bottom" secondItem="8lz-dp-hDV" secondAttribute="bottom" id="YeK-ed-rFf"/>
+                            <constraint firstItem="8lz-dp-hDV" firstAttribute="leading" secondItem="quY-EW-b2p" secondAttribute="leading" id="i3K-kN-cVB"/>
+                            <constraint firstItem="8lz-dp-hDV" firstAttribute="top" secondItem="quY-EW-b2p" secondAttribute="top" id="svA-a9-kQL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="quY-EW-b2p"/>
                     </view>
                     <navigationItem key="navigationItem" title="Artist name" largeTitleDisplayMode="never" id="1Vy-va-CPL"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="8lz-dp-hDV" id="KrJ-1b-spY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAt-ec-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

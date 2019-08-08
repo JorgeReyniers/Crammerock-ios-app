@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Artist : Codable{
+struct Artist : Codable{
     var name: String
     var stage: Stage
     var dayOfPerformance: DayOfPerformance
