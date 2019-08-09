@@ -13,23 +13,45 @@ class ArtistDetailsViewController: UIViewController {
     var artist: Artist!
 
     
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var bannerImageView: UIImageView!
+    
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var biographyLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.title = artist.name
-        
+        genreLabel.text = ""
+        countryLabel.text = ""
+        biographyLabel.text = ""
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         fetchArtistDetails(artistName: artist.name, completion: {
             (fetchedArtistDetails) in
-            self.artist.artistDetails = fetchedArtistDetails
-            self.updateUI()
+            if let fetchedArtistDetails = fetchedArtistDetails {
+                    self.artist.artistDetails = fetchedArtistDetails
+                    self.updateUI()
+            }
         })
     }
     
     //View methods
     
     func updateUI() {
-        print("\(artist.name) - \(artist.artistDetails?.country ?? "") - \(artist.artistDetails?.genre ?? "") - \(artist.artistDetails?.biography ?? "")")
+        if let bannerUrl = artist.artistDetails?.bannerUrl {
+            let task = URLSession.shared.dataTask(with: bannerUrl, completionHandler: {(data, response, error) in
+                if let data = data, let bannerImage = UIImage(data: data) {
+                    DispatchQueue.main.sync {
+                        self.genreLabel.text = self.artist.artistDetails?.genre
+                        self.countryLabel.text = self.artist.artistDetails?.country
+                        self.biographyLabel.text = self.artist.artistDetails?.biography
+                        self.bannerImageView.image = bannerImage
+                    }
+                }
+            })
+            task.resume()
+        }
     }
     
     //API methods
@@ -56,5 +78,4 @@ class ArtistDetailsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
 }
