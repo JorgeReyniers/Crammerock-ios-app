@@ -30,8 +30,8 @@ class ArtistDetailsViewController: UIViewController {
         fetchArtistDetails(artistName: artist.name, completion: {
             (fetchedArtistDetails) in
             if let fetchedArtistDetails = fetchedArtistDetails {
-                    self.artist.artistDetails = fetchedArtistDetails
-                    self.updateUI()
+                self.artist.artistDetails = fetchedArtistDetails
+                self.updateUI()
             }
         })
     }
@@ -39,18 +39,25 @@ class ArtistDetailsViewController: UIViewController {
     //View methods
     
     func updateUI() {
+        DispatchQueue.main.async {
+            self.genreLabel.text = self.artist.artistDetails?.genre
+            self.countryLabel.text = self.artist.artistDetails?.country
+            self.biographyLabel.text = self.artist.artistDetails?.biography
+            self.fetchAndUpdateBanner()
+        }
+    }
+    
+    func fetchAndUpdateBanner() {
         if let bannerUrl = artist.artistDetails?.bannerUrl {
             let task = URLSession.shared.dataTask(with: bannerUrl, completionHandler: {(data, response, error) in
                 if let data = data, let bannerImage = UIImage(data: data) {
-                    DispatchQueue.main.sync {
-                        self.genreLabel.text = self.artist.artistDetails?.genre
-                        self.countryLabel.text = self.artist.artistDetails?.country
-                        self.biographyLabel.text = self.artist.artistDetails?.biography
+                    DispatchQueue.main.async {
                         self.bannerImageView.image = bannerImage
                     }
                 }
             })
             task.resume()
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
     
