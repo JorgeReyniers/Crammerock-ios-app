@@ -74,7 +74,8 @@ class LineUpTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == PropertyKeys.artistDetailsSegue else { return }
-        if let indexPath = tableView.indexPathForSelectedRow {
+        if let indexPath =
+            tableView.indexPathForSelectedRow {
             let artistDetailsViewController = segue.destination as! ArtistDetailsViewController
             artistDetailsViewController.artist = selectedArtists[indexPath.row]
         }

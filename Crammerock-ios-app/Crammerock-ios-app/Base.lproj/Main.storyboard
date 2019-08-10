@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Nieuws-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,43 +19,129 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-et-Lrv">
-                                <rect key="frame" x="20" y="40" width="335" height="220"/>
+                                <rect key="frame" x="20" y="84" width="335" height="133.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cr_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-VY-Ud5">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="181.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="95"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 &amp; 7 september 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmB-po-Fur">
-                                        <rect key="frame" x="0.0" y="181.5" width="335" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 &amp; 7 september 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmB-po-Fur">
+                                        <rect key="frame" x="0.0" y="95" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Stekene, Oost-Vlaanderen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-Nj-zUt">
-                                        <rect key="frame" x="0.0" y="202" width="335" height="18"/>
+                                        <rect key="frame" x="0.0" y="115.5" width="335" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fey-OM-i1s">
+                                <rect key="frame" x="0.0" y="237.5" width="375" height="370.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CBs-ER-Rt4">
+                                    <size key="itemSize" width="350" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsItemCell" id="J7i-Pj-UOf" customClass="NewsItemCollectionViewCell" customModule="Crammerock_ios_app" customModuleProvider="target">
+                                        <rect key="frame" x="12.5" y="0.0" width="350" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fn5-Gb-FZV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="135"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="135" id="7ZT-00-W2g"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1R-H1-Sv4">
+                                                    <rect key="frame" x="20" y="150" width="310" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVp-ui-tM3">
+                                                    <rect key="frame" x="20" y="219.5" width="310" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="R1R-H1-Sv4" secondAttribute="trailing" constant="12" id="7dp-jM-iv8"/>
+                                            <constraint firstItem="fn5-Gb-FZV" firstAttribute="leading" secondItem="J7i-Pj-UOf" secondAttribute="leading" id="NgL-fn-llI"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="NVp-ui-tM3" secondAttribute="trailing" constant="12" id="RaQ-y4-6np"/>
+                                            <constraint firstItem="R1R-H1-Sv4" firstAttribute="leading" secondItem="J7i-Pj-UOf" secondAttribute="leadingMargin" constant="12" id="XuT-Sb-Nb8"/>
+                                            <constraint firstItem="fn5-Gb-FZV" firstAttribute="top" secondItem="J7i-Pj-UOf" secondAttribute="top" id="b23-nK-pZR"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="NVp-ui-tM3" secondAttribute="bottom" constant="8" id="g9I-bw-gol"/>
+                                            <constraint firstAttribute="trailing" secondItem="fn5-Gb-FZV" secondAttribute="trailing" id="htR-wc-4yF"/>
+                                            <constraint firstItem="R1R-H1-Sv4" firstAttribute="top" secondItem="fn5-Gb-FZV" secondAttribute="bottom" constant="15" id="igB-js-u5t"/>
+                                            <constraint firstItem="NVp-ui-tM3" firstAttribute="leading" secondItem="J7i-Pj-UOf" secondAttribute="leadingMargin" constant="12" id="pQN-1R-qZb"/>
+                                        </constraints>
+                                        <size key="customSize" width="350" height="250"/>
+                                        <connections>
+                                            <outlet property="newsItemImageView" destination="fn5-Gb-FZV" id="MK0-tp-YlR"/>
+                                            <outlet property="publicationDateLabel" destination="NVp-ui-tM3" id="ymQ-yE-BYH"/>
+                                            <outlet property="titleLabel" destination="R1R-H1-Sv4" id="Svm-Uh-acJ"/>
+                                            <segue destination="Qfk-wQ-ucB" kind="show" identifier="NewsItemSegue" id="mMT-Rr-Nnu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ohk-Ll-CN7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iiH-xz-4MA"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fey-OM-i1s" secondAttribute="bottom" constant="10" id="BLD-U5-UuC"/>
                             <constraint firstAttribute="trailing" secondItem="X4g-et-Lrv" secondAttribute="trailing" constant="20" id="Ry4-bQ-PEM"/>
+                            <constraint firstItem="fey-OM-i1s" firstAttribute="top" secondItem="X4g-et-Lrv" secondAttribute="bottom" constant="20" id="U6i-Go-PkK"/>
                             <constraint firstItem="X4g-et-Lrv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XMU-ea-TBt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fey-OM-i1s" secondAttribute="trailing" id="kB4-0b-9I3"/>
+                            <constraint firstItem="fey-OM-i1s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kYn-zx-Wz1"/>
                             <constraint firstItem="X4g-et-Lrv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="maR-jg-t8O"/>
-                            <constraint firstItem="X4g-et-Lrv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="tLN-CO-sdi"/>
+                            <constraint firstItem="X4g-et-Lrv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="tLN-CO-sdi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Nieuws" image="home" id="Vbq-hP-6Sx"/>
+                    <navigationItem key="navigationItem" id="Ukh-5C-Dfx">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="Xf6-xo-phk"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="fey-OM-i1s" id="Dwv-XK-eTV"/>
                         <outlet property="logoHeaderImage" destination="beJ-VY-Ud5" id="bmG-Tn-EIq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1551" y="229"/>
+            <point key="canvasLocation" x="-1551" y="1037"/>
+        </scene>
+        <!--Nieuws-->
+        <scene sceneID="4XQ-fp-I6y">
+            <objects>
+                <viewController id="Qfk-wQ-ucB" customClass="NewsItemViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S0I-JC-2LW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y0e-bz-sDU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nieuws" id="scz-se-TEn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H83-1g-aNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1551" y="1773"/>
         </scene>
         <!--Artist name-->
         <scene sceneID="06u-ap-YDO">
@@ -80,7 +166,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkn-qI-1hG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkn-qI-1hG">
                                         <rect key="frame" x="167.5" y="0.0" width="167.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -144,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAt-ec-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682.39999999999998" y="1773.4632683658172"/>
+            <point key="canvasLocation" x="-678" y="1773"/>
         </scene>
         <!--Praktisch-->
         <scene sceneID="hb3-7U-kEc">
@@ -169,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARx-Be-t81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="229"/>
+            <point key="canvasLocation" x="215" y="229"/>
         </scene>
         <!--Beheer artiesten-->
         <scene sceneID="l7m-i6-eDs">
@@ -216,7 +302,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4PE-fV-6xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="1037"/>
+            <point key="canvasLocation" x="1118" y="1037"/>
         </scene>
         <!--Add Edit Artist Table View Controller-->
         <scene sceneID="3AB-L5-og3">
@@ -449,7 +535,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sF-B3-Ayo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gFh-fn-SIv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="2515"/>
+            <point key="canvasLocation" x="1118" y="2511"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y56-kS-BXq">
@@ -465,7 +551,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mz5-7r-h2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="1773"/>
+            <point key="canvasLocation" x="1118" y="1773"/>
         </scene>
         <!--Artiestenbeheer-->
         <scene sceneID="VBf-Ly-pgU">
@@ -482,7 +568,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aya-Oa-xqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="229"/>
+            <point key="canvasLocation" x="1119" y="229"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bf8-Bq-ATS">
@@ -495,7 +581,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KCb-Oz-SM8"/>
+                        <segue destination="v70-d6-TZV" kind="relationship" relationship="viewControllers" id="KCb-Oz-SM8"/>
                         <segue destination="qYv-Q1-xLw" kind="relationship" relationship="viewControllers" id="zaJ-GW-Y3b"/>
                         <segue destination="8UW-sE-hah" kind="relationship" relationship="viewControllers" id="ZsQ-r5-gBt"/>
                         <segue destination="1DP-hv-eIZ" kind="relationship" relationship="viewControllers" id="yhZ-pm-THy"/>
@@ -528,7 +614,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D44-xO-Riu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682" y="229"/>
+            <point key="canvasLocation" x="-678" y="229"/>
         </scene>
         <!--Line-up-->
         <scene sceneID="cY5-yn-VV1">
@@ -615,7 +701,30 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v16-rj-lp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682" y="1037"/>
+            <point key="canvasLocation" x="-678" y="1037"/>
+        </scene>
+        <!--Nieuws-->
+        <scene sceneID="wOA-e8-EZf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v70-d6-TZV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nieuws" image="home" id="Vbq-hP-6Sx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gI0-m6-efn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" red="0.1215686275" green="0.36078431370000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Nw-TO-5b3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8e-lS-Xgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1551.2" y="228.93553223388307"/>
         </scene>
     </scenes>
     <resources>

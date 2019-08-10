@@ -21,10 +21,13 @@
 		99391C2322EF4F22000C6A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99391C2122EF4F22000C6A1D /* LaunchScreen.storyboard */; };
 		99391C2E22EF4F22000C6A1D /* Crammerock_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391C2D22EF4F22000C6A1D /* Crammerock_ios_appTests.swift */; };
 		99391C3922EF4F22000C6A1D /* Crammerock_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391C3822EF4F22000C6A1D /* Crammerock_ios_appUITests.swift */; };
+		994838D122FF2621008385D0 /* NewsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994838D022FF2621008385D0 /* NewsItemViewController.swift */; };
 		996B6BE522FB4C2D0012A3E3 /* DayOfPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BE422FB4C2D0012A3E3 /* DayOfPerformance.swift */; };
 		996B6BE722FB4C350012A3E3 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BE622FB4C350012A3E3 /* Stage.swift */; };
 		996B6BE922FB4C3E0012A3E3 /* ArtistDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BE822FB4C3E0012A3E3 /* ArtistDetails.swift */; };
 		996B6BEB22FC53100012A3E3 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BEA22FC530F0012A3E3 /* URLExtension.swift */; };
+		996B6BEE22FEF8BC0012A3E3 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BED22FEF8BC0012A3E3 /* NewsItem.swift */; };
+		996B6BF022FF0A230012A3E3 /* NewsItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BEF22FF0A230012A3E3 /* NewsItemCollectionViewCell.swift */; };
 		9998BBE122F9A5050011C987 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9998BBE022F9A5050011C987 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,10 +69,13 @@
 		99391C3422EF4F22000C6A1D /* Crammerock-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crammerock-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99391C3822EF4F22000C6A1D /* Crammerock_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crammerock_ios_appUITests.swift; sourceTree = "<group>"; };
 		99391C3A22EF4F22000C6A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		994838D022FF2621008385D0 /* NewsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemViewController.swift; sourceTree = "<group>"; };
 		996B6BE422FB4C2D0012A3E3 /* DayOfPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfPerformance.swift; sourceTree = "<group>"; };
 		996B6BE622FB4C350012A3E3 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		996B6BE822FB4C3E0012A3E3 /* ArtistDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetails.swift; sourceTree = "<group>"; };
 		996B6BEA22FC530F0012A3E3 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		996B6BED22FEF8BC0012A3E3 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		996B6BEF22FF0A230012A3E3 /* NewsItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		9998BBE022F9A5050011C987 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +113,7 @@
 				990446D122F220D60002D451 /* ArtistDetailsViewController.swift */,
 				99391C1A22EF4F21000C6A1D /* HomeViewController.swift */,
 				990E925422F5F8BF004BAE5A /* AdminTableViewController.swift */,
+				994838D022FF2621008385D0 /* NewsItemViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 		990E924D22F5BD2B004BAE5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				996B6BEC22FEF8A50012A3E3 /* NewsItem */,
 				996B6BE322FB4BFC0012A3E3 /* Artist */,
 			);
 			path = Models;
@@ -122,8 +130,6 @@
 		99391C0C22EF4F21000C6A1D = {
 			isa = PBXGroup;
 			children = (
-				9998BBE022F9A5050011C987 /* DateHelper.swift */,
-				996B6BEA22FC530F0012A3E3 /* URLExtension.swift */,
 				99391C1722EF4F21000C6A1D /* Crammerock-ios-app */,
 				99391C2C22EF4F22000C6A1D /* Crammerock-ios-appTests */,
 				99391C3722EF4F22000C6A1D /* Crammerock-ios-appUITests */,
@@ -144,7 +150,9 @@
 		99391C1722EF4F21000C6A1D /* Crammerock-ios-app */ = {
 			isa = PBXGroup;
 			children = (
-				990E925622F60A3E004BAE5A /* ArtistTableViewCell.swift */,
+				996B6BEA22FC530F0012A3E3 /* URLExtension.swift */,
+				9998BBE022F9A5050011C987 /* DateHelper.swift */,
+				996B6BF122FF0A2A0012A3E3 /* Cells */,
 				990E924D22F5BD2B004BAE5A /* Models */,
 				990E920622F4866A004BAE5A /* ViewControllers */,
 				99391C1822EF4F21000C6A1D /* AppDelegate.swift */,
@@ -183,6 +191,23 @@
 				996B6BE822FB4C3E0012A3E3 /* ArtistDetails.swift */,
 			);
 			path = Artist;
+			sourceTree = "<group>";
+		};
+		996B6BEC22FEF8A50012A3E3 /* NewsItem */ = {
+			isa = PBXGroup;
+			children = (
+				996B6BED22FEF8BC0012A3E3 /* NewsItem.swift */,
+			);
+			path = NewsItem;
+			sourceTree = "<group>";
+		};
+		996B6BF122FF0A2A0012A3E3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				990E925622F60A3E004BAE5A /* ArtistTableViewCell.swift */,
+				996B6BEF22FF0A230012A3E3 /* NewsItemCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				990E925122F5C15B004BAE5A /* LineUpTableViewController.swift in Sources */,
+				996B6BEE22FEF8BC0012A3E3 /* NewsItem.swift in Sources */,
 				99391C1B22EF4F21000C6A1D /* HomeViewController.swift in Sources */,
 				996B6BE522FB4C2D0012A3E3 /* DayOfPerformance.swift in Sources */,
 				990E925922F86AC3004BAE5A /* AddEditArtistTableViewController.swift in Sources */,
@@ -327,9 +353,11 @@
 				9998BBE122F9A5050011C987 /* DateHelper.swift in Sources */,
 				990446D222F220D60002D451 /* ArtistDetailsViewController.swift in Sources */,
 				990E925522F5F8BF004BAE5A /* AdminTableViewController.swift in Sources */,
+				996B6BF022FF0A230012A3E3 /* NewsItemCollectionViewCell.swift in Sources */,
 				990E925722F60A3E004BAE5A /* ArtistTableViewCell.swift in Sources */,
 				990E924F22F5BD5A004BAE5A /* Artist.swift in Sources */,
 				996B6BE722FB4C350012A3E3 /* Stage.swift in Sources */,
+				994838D122FF2621008385D0 /* NewsItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
