@@ -35,7 +35,7 @@ extension Date {
     //Voorlopig nog nergens gebruikt!
     func toString() -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        formatter.dateFormat = "dd-MM-yyyy"
         return formatter.string(from: self)
     }
     
