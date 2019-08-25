@@ -23,6 +23,12 @@ class DateHelper {
 }
 
 extension Date {
+    func toString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        return formatter.string(from: self)
+    }
+    
     func toTimeString() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"

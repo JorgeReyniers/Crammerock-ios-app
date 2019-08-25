@@ -21,16 +21,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-et-Lrv">
                                 <rect key="frame" x="20" y="84" width="335" height="133.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" image="cr_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-VY-Ud5">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="95"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cr_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-VY-Ud5">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="95.000000000000227"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="6 &amp; 7 september 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmB-po-Fur">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 &amp; 7 september 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmB-po-Fur">
                                         <rect key="frame" x="0.0" y="95" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Stekene, Oost-Vlaanderen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-Nj-zUt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Stekene, Oost-Vlaanderen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-Nj-zUt">
                                         <rect key="frame" x="0.0" y="115.5" width="335" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
@@ -144,7 +144,9 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F8t-SF-Nyk">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="135" id="MP7-X1-QF9"/>
+                                                    <constraint firstAttribute="height" constant="135" id="MP7-X1-QF9">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="322"/>
+                                                    </constraint>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1V-2U-Qju">
@@ -172,7 +174,9 @@
                                             <constraint firstItem="5SH-1j-KZ8" firstAttribute="leading" secondItem="aIG-47-lOX" secondAttribute="leading" constant="12" id="2hc-eu-Kze"/>
                                             <constraint firstAttribute="trailing" secondItem="5SH-1j-KZ8" secondAttribute="trailing" constant="12" id="655-fi-VYW"/>
                                             <constraint firstAttribute="trailing" secondItem="C6w-s4-teD" secondAttribute="trailing" constant="12" id="8zb-n9-7XF"/>
-                                            <constraint firstItem="o1V-2U-Qju" firstAttribute="top" secondItem="aIG-47-lOX" secondAttribute="top" constant="115" id="Cua-lJ-gu4"/>
+                                            <constraint firstItem="o1V-2U-Qju" firstAttribute="top" secondItem="aIG-47-lOX" secondAttribute="top" constant="115" id="Cua-lJ-gu4">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="305"/>
+                                            </constraint>
                                             <constraint firstAttribute="trailing" secondItem="o1V-2U-Qju" secondAttribute="trailing" constant="12" id="Ex9-06-0NO"/>
                                             <constraint firstItem="C6w-s4-teD" firstAttribute="top" secondItem="o1V-2U-Qju" secondAttribute="bottom" constant="5" id="QVY-Y2-xqw"/>
                                             <constraint firstItem="5SH-1j-KZ8" firstAttribute="top" secondItem="C6w-s4-teD" secondAttribute="bottom" constant="20" id="Rrl-gW-6dy"/>
@@ -526,11 +530,11 @@
                                         <rect key="frame" x="0.0" y="619" width="375" height="216"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4EK-xW-8aB" id="SxX-3d-5s1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="834" height="215.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRT-Ph-OAy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="834" height="215.5"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="589456800.66663694">
                                                         <!--2019-09-06 10:00:00 +0000-->
                                                     </date>
