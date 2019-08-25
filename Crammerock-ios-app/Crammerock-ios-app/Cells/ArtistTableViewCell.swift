@@ -13,6 +13,11 @@ class ArtistTableViewCell: UITableViewCell {
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var startDateTimeOfPerformanceLabel: UILabel!
     @IBOutlet weak var stageLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    var artist: Artist?
+    
+    var artistCellDelegate: ArtistTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,9 +31,28 @@ class ArtistTableViewCell: UITableViewCell {
     }
     
     func update(with artist: Artist) {
+        self.artist = artist
         artistNameLabel.text = artist.name
         startDateTimeOfPerformanceLabel.text = artist.startDateTimeOfPerformance.toTimeString()
         stageLabel.text = artist.stage.stringValue
+        favoriteButton.isSelected = artist.isFavorite
+        setFavoriteButton()
+    }
+    
+    func setFavoriteButton() {
+        let favoriteButtonName = favoriteButton.isSelected == true ? "heart-selected" : "heart-not-selected"
+        favoriteButton.setImage(UIImage(named: favoriteButtonName), for: .normal)
     }
 
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        favoriteButton.isSelected.toggle()
+        setFavoriteButton()
+        if let artist = artist {
+            self.artistCellDelegate?.artistTableViewCell(favoredArtist: artist)
+        }
+    }
+}
+
+protocol ArtistTableViewCellDelegate {
+    func artistTableViewCell(favoredArtist: Artist)
 }

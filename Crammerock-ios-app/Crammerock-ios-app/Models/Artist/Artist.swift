@@ -8,13 +8,23 @@
 
 import Foundation
 
-struct Artist : Codable{
+struct Artist : Codable, Comparable{
+    
     var name: String
     var stage: Stage
     var dayOfPerformance: DayOfPerformance
     var startDateTimeOfPerformance: Date
     var endDateTimeOfPerformance: Date
+    var isFavorite: Bool = false
     var artistDetails: ArtistDetails?
+    
+    static func == (lhs: Artist, rhs: Artist) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
+    static func < (lhs: Artist, rhs: Artist) -> Bool {
+        return lhs.startDateTimeOfPerformance < rhs.startDateTimeOfPerformance
+    }
     
     static var archiveUrl: URL {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

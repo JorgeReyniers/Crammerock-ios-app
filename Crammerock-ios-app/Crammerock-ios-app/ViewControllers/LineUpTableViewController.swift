@@ -8,8 +8,8 @@
 
 import UIKit
 
-class LineUpTableViewController: UITableViewController {
-    
+class LineUpTableViewController: UITableViewController, ArtistTableViewCellDelegate {
+
     var artists: [Artist] = []
     var selectedArtists: [Artist] = []
     
@@ -17,15 +17,11 @@ class LineUpTableViewController: UITableViewController {
         static let artistCell = "ArtistCell"
         static let artistDetailsSegue = "ArtistDetailsSegue"
     }
+    
     @IBOutlet weak var dayOfPerformanceButton: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +29,18 @@ class LineUpTableViewController: UITableViewController {
         artists = getArtists().sorted(by: {$0.name < $1.name})
         selectedArtists = defineSelectedArtists()
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("line up view will disappear")
+        Artist.saveToFile(artists: artists)
+    }
+    
+    func artistTableViewCell(favoredArtist: Artist) {
+        if let index = artists.firstIndex(where: {$0.name == favoredArtist.name}) {
+            artists[index].isFavorite.toggle()
+        }
     }
     
     func getArtists() -> [Artist] {
@@ -60,6 +68,7 @@ class LineUpTableViewController: UITableViewController {
         let artist = selectedArtists[indexPath.row]
         // Configure the cell...
         cell.update(with: artist)
+        cell.artistCellDelegate = self as ArtistTableViewCellDelegate
         return cell
     }
     

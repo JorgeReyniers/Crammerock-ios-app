@@ -21,16 +21,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-et-Lrv">
                                 <rect key="frame" x="20" y="84" width="335" height="133.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cr_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-VY-Ud5">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="95.000000000000227"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" image="cr_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-VY-Ud5">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="95"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 &amp; 7 september 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmB-po-Fur">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="6 &amp; 7 september 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmB-po-Fur">
                                         <rect key="frame" x="0.0" y="95" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Stekene, Oost-Vlaanderen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-Nj-zUt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Stekene, Oost-Vlaanderen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-Nj-zUt">
                                         <rect key="frame" x="0.0" y="115.5" width="335" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
@@ -303,31 +303,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAt-ec-MaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-678" y="1773"/>
-        </scene>
-        <!--Praktisch-->
-        <scene sceneID="hb3-7U-kEc">
-            <objects>
-                <viewController id="8UW-sE-hah" customClass="PracticalViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gDq-CQ-sq1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GI-Ae-TbJ">
-                                <rect key="frame" x="154" y="323" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="85y-Cp-hnu"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Praktisch" image="info" id="IF8-PF-XJY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ARx-Be-t81" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="215" y="229"/>
         </scene>
         <!--Beheer artiesten-->
         <scene sceneID="l7m-i6-eDs">
@@ -625,6 +600,101 @@
             </objects>
             <point key="canvasLocation" x="1118" y="1773"/>
         </scene>
+        <!--Timetable-->
+        <scene sceneID="Yov-ZA-Hyy">
+            <objects>
+                <tableViewController id="Yu5-qD-RJy" customClass="TimetableTableViewController" customModule="Crammerock_ios_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="iZY-iW-Imr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimetableCell" rowHeight="150" id="vSS-7B-mnL" customClass="TimetableTableViewCell" customModule="Crammerock_ios_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vSS-7B-mnL" id="MSV-2q-IOZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nvY-Zj-Ifx">
+                                            <rect key="frame" x="12" y="12" width="351" height="125.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTY-lh-dba">
+                                                    <rect key="frame" x="146" y="0.0" width="59" height="27"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bazart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JdJ-UC-0dV">
+                                                    <rect key="frame" x="134.5" y="33" width="82.5" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.58431372550000005" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Main South" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX9-bC-3xh">
+                                                    <rect key="frame" x="128" y="66" width="95.5" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" red="0.59999999999999998" green="0.85098039219999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO6-Mg-x5A">
+                                                    <rect key="frame" x="146" y="98.5" width="59" height="27"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.10099323379147053" green="0.28059597458886071" blue="0.33286405456852797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="nvY-Zj-Ifx" secondAttribute="trailing" constant="12" id="1OR-if-zCT"/>
+                                        <constraint firstItem="nvY-Zj-Ifx" firstAttribute="top" secondItem="MSV-2q-IOZ" secondAttribute="top" constant="12" id="B9s-8r-4qe"/>
+                                        <constraint firstAttribute="bottom" secondItem="nvY-Zj-Ifx" secondAttribute="bottom" constant="12" id="If4-Oo-nzA"/>
+                                        <constraint firstItem="nvY-Zj-Ifx" firstAttribute="leading" secondItem="MSV-2q-IOZ" secondAttribute="leading" constant="12" id="pp8-ia-nVS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artistNameLabel" destination="JdJ-UC-0dV" id="dU4-lz-sx7"/>
+                                    <outlet property="endDateTimeOfPerformanceLabel" destination="dO6-Mg-x5A" id="z11-MW-xJd"/>
+                                    <outlet property="stageLabel" destination="gX9-bC-3xh" id="A7x-ab-A6g"/>
+                                    <outlet property="startDateTimeOfPerformanceLabel" destination="cTY-lh-dba" id="nCp-MT-QlO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yu5-qD-RJy" id="0IX-Ni-PDP"/>
+                            <outlet property="delegate" destination="Yu5-qD-RJy" id="saO-FL-FyT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Timetable" id="BMx-hr-Km7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqv-In-RsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="1037"/>
+        </scene>
+        <!--Timetable-->
+        <scene sceneID="yQa-0Z-qN6">
+            <objects>
+                <navigationController id="ZN1-GI-Gr2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timetable" image="timetable" id="zA9-L6-aeY"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="OZb-7o-MZg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.16078431369999999" green="0.29803921570000003" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Yu5-qD-RJy" kind="relationship" relationship="rootViewController" id="Iyi-57-I6S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H70-Ie-Hd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="229"/>
+        </scene>
         <!--Artiestenbeheer-->
         <scene sceneID="VBf-Ly-pgU">
             <objects>
@@ -655,7 +725,7 @@
                     <connections>
                         <segue destination="v70-d6-TZV" kind="relationship" relationship="viewControllers" id="KCb-Oz-SM8"/>
                         <segue destination="qYv-Q1-xLw" kind="relationship" relationship="viewControllers" id="zaJ-GW-Y3b"/>
-                        <segue destination="8UW-sE-hah" kind="relationship" relationship="viewControllers" id="ZsQ-r5-gBt"/>
+                        <segue destination="ZN1-GI-Gr2" kind="relationship" relationship="viewControllers" id="8ab-f2-yEz"/>
                         <segue destination="1DP-hv-eIZ" kind="relationship" relationship="viewControllers" id="yhZ-pm-THy"/>
                     </connections>
                 </tabBarController>
@@ -736,6 +806,9 @@
                                                                 <constraint firstAttribute="height" constant="20" id="wTE-1B-XDl"/>
                                                             </constraints>
                                                             <state key="normal" title="Button" image="heart-not-selected"/>
+                                                            <connections>
+                                                                <action selector="favoriteButtonTapped:" destination="8yy-5H-xG8" eventType="touchUpInside" id="MeA-Jj-LDm"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -768,6 +841,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="artistNameLabel" destination="NNK-Bm-DMb" id="oni-DK-9mY"/>
+                                    <outlet property="favoriteButton" destination="Jfb-2w-3no" id="bMB-R9-Jam"/>
                                     <outlet property="stageLabel" destination="bGd-ZI-aEw" id="caS-v4-jmK"/>
                                     <outlet property="startDateTimeOfPerformanceLabel" destination="TV4-uX-3IO" id="nfT-Jm-aEF"/>
                                     <segue destination="aZW-bK-tSc" kind="show" identifier="ArtistDetailsSegue" id="juB-wj-jgO"/>
@@ -816,8 +890,8 @@
         <image name="cr_logo" width="1000" height="833"/>
         <image name="heart-not-selected" width="50" height="50"/>
         <image name="home" width="30" height="30"/>
-        <image name="info" width="30" height="30"/>
         <image name="text-list" width="30" height="30"/>
+        <image name="timetable" width="30" height="30"/>
         <image name="write" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

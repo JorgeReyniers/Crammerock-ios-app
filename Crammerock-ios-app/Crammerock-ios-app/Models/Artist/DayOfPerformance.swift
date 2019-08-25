@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum DayOfPerformance: Int, Codable {
+enum DayOfPerformance: Int, Codable, CaseIterable {
     case Vrijdag, Zaterdag
     var stringValue: String {
         switch self {

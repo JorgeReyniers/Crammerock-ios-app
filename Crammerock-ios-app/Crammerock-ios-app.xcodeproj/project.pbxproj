@@ -29,6 +29,8 @@
 		996B6BEE22FEF8BC0012A3E3 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BED22FEF8BC0012A3E3 /* NewsItem.swift */; };
 		996B6BF022FF0A230012A3E3 /* NewsItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B6BEF22FF0A230012A3E3 /* NewsItemCollectionViewCell.swift */; };
 		9998BBE122F9A5050011C987 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9998BBE022F9A5050011C987 /* DateHelper.swift */; };
+		99B6E5F82312C54B00D9CB8E /* TimetableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B6E5F72312C54B00D9CB8E /* TimetableTableViewController.swift */; };
+		99B6E5FA2312D0AA00D9CB8E /* TimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B6E5F92312D0AA00D9CB8E /* TimetableTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		996B6BED22FEF8BC0012A3E3 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		996B6BEF22FF0A230012A3E3 /* NewsItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		9998BBE022F9A5050011C987 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		99B6E5F72312C54B00D9CB8E /* TimetableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableTableViewController.swift; sourceTree = "<group>"; };
+		99B6E5F92312D0AA00D9CB8E /* TimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				99391C1A22EF4F21000C6A1D /* HomeViewController.swift */,
 				990E925422F5F8BF004BAE5A /* AdminTableViewController.swift */,
 				994838D022FF2621008385D0 /* NewsItemViewController.swift */,
+				99B6E5F72312C54B00D9CB8E /* TimetableTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			children = (
 				990E925622F60A3E004BAE5A /* ArtistTableViewCell.swift */,
 				996B6BEF22FF0A230012A3E3 /* NewsItemCollectionViewCell.swift */,
+				99B6E5F92312D0AA00D9CB8E /* TimetableTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B6E5FA2312D0AA00D9CB8E /* TimetableTableViewCell.swift in Sources */,
 				990E925122F5C15B004BAE5A /* LineUpTableViewController.swift in Sources */,
 				996B6BEE22FEF8BC0012A3E3 /* NewsItem.swift in Sources */,
 				99391C1B22EF4F21000C6A1D /* HomeViewController.swift in Sources */,
@@ -353,6 +360,7 @@
 				9998BBE122F9A5050011C987 /* DateHelper.swift in Sources */,
 				990446D222F220D60002D451 /* ArtistDetailsViewController.swift in Sources */,
 				990E925522F5F8BF004BAE5A /* AdminTableViewController.swift in Sources */,
+				99B6E5F82312C54B00D9CB8E /* TimetableTableViewController.swift in Sources */,
 				996B6BF022FF0A230012A3E3 /* NewsItemCollectionViewCell.swift in Sources */,
 				990E925722F60A3E004BAE5A /* ArtistTableViewCell.swift in Sources */,
 				990E924F22F5BD5A004BAE5A /* Artist.swift in Sources */,
